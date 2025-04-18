@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  
+  :root {
+    --background: 258 27% 15%;
+    --foreground: 240 5% 92%;
+    
+    --card: 258 34% 35%;
+    --card-foreground: 240 5% 92%;
+    
+    --popover: 259 33% 34%;
+    --popover-foreground: 240 5% 92%;
+    
+    --primary: 259 100% 84%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 258 30% 28%;
+    --secondary-foreground: 240 5% 92%;
+    
+    --muted: 258 15% 25%;
+    --muted-foreground: 240 5% 65%;
+    
+    --accent: 258 100% 84%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 258 27% 30%;
+    --input: 258 27% 30%;
+    --ring: 258 100% 84%;
+    
+    --radius: 0.5rem;
+    
+    --chart-1: 259 100% 84%;
+    --chart-2: 258 82% 76%;
+    --chart-3: 285 83% 73%;
+    --chart-4: 320 83% 73%;
+    --chart-5: 48 96% 53%;
+    
+    --sidebar-background: 258 31% 18%;
+    --sidebar-foreground: 240 5% 92%;
+    --sidebar-primary: 259 100% 84%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 258 34% 35%;
+    --sidebar-accent-foreground: 240 5% 92%;
+    --sidebar-border: 258 27% 30%;
+    --sidebar-ring: 258 100% 84%;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/70 backdrop-blur-md border border-accent/20 shadow-md;
+  }
+
+  .glow-btn {
+    @apply transition-all duration-300;
+  }
+
+  .glow-btn:hover {
+    @apply shadow-[0_0_15px_rgba(165,110,255,0.5)];
+  }
+
+  .sector-cell:hover {
+    @apply brightness-110;
+  }
+
+  .stock-tooltip {
+    @apply opacity-0 transition-opacity duration-300;
+  }
+
+  .sector-cell:hover .stock-tooltip {
+    @apply opacity-100;
+  }
+
+  .tab-active {
+    @apply border-b-2 border-accent;
+  }
+
+  .progress {
+    @apply h-2 rounded-full overflow-hidden;
+  }
+
+  .progress-bar {
+    @apply h-full rounded-full;
+  }
+}
