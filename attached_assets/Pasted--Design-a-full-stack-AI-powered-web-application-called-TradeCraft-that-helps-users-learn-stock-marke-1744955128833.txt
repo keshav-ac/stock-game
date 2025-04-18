@@ -1,0 +1,103 @@
+"Design a full-stack AI-powered web application called TradeCraft that helps users learn stock market trading/investing through a gamified experience and advanced AI-based analysis. The design and functionality must include the following features and components:"
+
+🎨 Frontend & UI/UX Requirements:
+
+Use a dark purplish theme with color tones like #1e1b2e (background), #3b2f63 (cards), and neon highlights like #a56eff / #9b5de5
+
+Responsive dashboard layout with 3 core sections:
+
+Gamified Learning Mode – XP, quests, missions, leaderboard
+
+Trader/Investor Mode – simulate real trades using paper money
+
+AI Investment Assistant Panel – graphs, insights, suggestions
+
+Include interactive graphs and charts (using Recharts, Chart.js, or D3.js) for:
+
+Stock price trends
+
+Sector heatmaps
+
+Sentiment scores
+
+Button hover glow effect with CSS transitions using box-shadow for subtle neon glow
+
+Frosted glass UI for cards (backdrop-filter: blur) and minimal icons using lucide-react
+
+Add 4 special UI components:
+
+"If I Had Invested" Simulator: Input stock + date → shows past returns, benchmark comparison, and chart
+
+"Investment Style Analyzer": Small quiz or usage-based tracking to define user as swing trader, investor, or risk-taker
+
+"Smart Alerts Panel": User can set custom triggers (price dip %, sentiment change, news spike) → app gives notifications
+
+"Sector Heatmap": Color-coded map showing top-performing sectors with hover popups for stock data
+
+⚙ Backend Functionality Requirements:
+
+Use Python backend (Flask or FastAPI) or Node.js (Express) to build:
+
+Sentiment Analysis API
+
+Scrape tweets, Reddit, StockTwits (via Twitter API / Pushshift / scraping)
+
+Use VADER or BERT models to compute stock/sector sentiment
+
+Return sentiment scores in % (Positive/Neutral/Negative)
+
+News Impact Analyzer API
+
+Use NewsAPI, Google News RSS, or scraping (BeautifulSoup)
+
+NLP to predict short-term impact of headlines on specific stocks
+
+Return impact prediction: ✅ Boosting / ⚠ Risky / ❌ Negative
+
+Trend Data & Stock Stats API
+
+Fetch live data using Yahoo Finance / Alpha Vantage
+
+Calculate RSI, MACD, Moving Averages
+
+Generate AI-based suggestions: Hold/Buy/Sell
+
+"If I Had Invested" Simulator Endpoint
+
+Input: stock symbol + date
+
+Output: % gain/loss, chart data, comparison to Nifty/Sensex
+
+User Quiz Logic + Investment Type Detector
+
+Small form-based quiz to determine risk appetite
+
+Store profile and tailor UI accordingly
+
+Alerts Engine
+
+Store user-defined alerts in DB (PostgreSQL / MongoDB)
+
+Background service checks conditions (price drop/sentiment shift)
+
+Sends notification or in-app alert when triggered
+
+📦 Tech Stack Preferences:
+
+Frontend: React + Tailwind + Recharts/Chart.js
+
+Backend: Flask (Python) or Express (Node.js)
+
+DB: MongoDB or PostgreSQL
+
+NLP/ML: Python with transformers, nltk, scikit-learn
+
+Deployment: Vercel (frontend) + Render/Heroku/EC2 (backend)
+
+🌟 Optional UI Bonus:
+
+Add floating chatbot icon with glowing ring for user queries
+
+Night-mode-only UI with animations for hover, chart transitions
+
+Sector switching tabs with animated transitions
