@@ -18,19 +18,16 @@ const Navbar: React.FC = () => {
         
         <div className="hidden md:flex items-center space-x-6">
           <Link href="/">
-            <a className="text-foreground hover:text-accent transition-colors">Dashboard</a>
+            <span className="text-foreground hover:text-accent transition-colors cursor-pointer">Dashboard</span>
           </Link>
           <Link href="/learn">
-            <a className="text-foreground hover:text-accent transition-colors">Learn</a>
+            <span className="text-foreground hover:text-accent transition-colors cursor-pointer">Learn</span>
           </Link>
-          <Link href="/trade">
-            <a className="text-foreground hover:text-accent transition-colors">Trade</a>
-          </Link>
-          <Link href="/analysis">
-            <a className="text-foreground hover:text-accent transition-colors">Analysis</a>
+          <Link href="/trade-analysis">
+            <span className="text-foreground hover:text-accent transition-colors cursor-pointer">Trade Analysis</span>
           </Link>
           <Link href="/community">
-            <a className="text-foreground hover:text-accent transition-colors">Community</a>
+            <span className="text-foreground hover:text-accent transition-colors cursor-pointer">Community</span>
           </Link>
         </div>
         
